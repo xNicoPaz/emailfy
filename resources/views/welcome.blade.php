@@ -6,7 +6,7 @@
 	<meta name="csrf-token" value="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Laravel</title>
+	<title>Emailfy</title>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -23,7 +23,7 @@
 <div id="app">
 	<div class="container">
 		<div class="row">
-			<h1>Cliente para envio de correo</h1>
+			<h3>Enviar emails de texto plano</h3>
 		</div>
 		<div class="row">
 			<div class="col-12 form-group">
@@ -46,7 +46,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<button id="sendEmailBtn" class="btn btn-primary pull-right" @click="sendEmailBtnClick">Enviar email</button>
+			<div class="col-12 form-group">
+				<button id="sendEmailBtn" class="btn btn-primary" @click="sendEmailBtnClick">Enviar email</button>				
+			</div>
 		</div>
 	</div>
 </div>
@@ -59,7 +61,7 @@
 		data: {
 			email: {
 				from: '',
-				to: '',
+				to: 'soporte@soportify.com',
 				subject: '',
 				body: '',				
 			}
